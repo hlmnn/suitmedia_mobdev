@@ -1,11 +1,9 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:http/http.dart' as http;
 import 'package:suitmedia_mobdev/data/data_state.dart';
 import 'package:suitmedia_mobdev/data/model/user_model.dart';
 import 'package:suitmedia_mobdev/ui/cubit/list_user_cubit.dart';
-import 'package:suitmedia_mobdev/ui/screen/Screen2.dart';
+import 'package:suitmedia_mobdev/ui/screen/SecondScreen.dart';
 
 class Screen3 extends StatefulWidget {
   const Screen3({super.key, required this.title, required this.name});
@@ -105,25 +103,29 @@ class _Screen3State extends State<Screen3> {
           if (items.isEmpty) {
             return RefreshIndicator(
               onRefresh: refresh,
-              child: ListView(children: [
-                Center(
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                        top: 50, bottom: 5, left: 20, right: 20),
-                    child: Column(
-                      children: [
-                        const Text(
-                            "List user is empty!",
-                            style: TextStyle(fontSize: 15)),
-                        Image.asset(
-                          'assets/images/empty.png',
-                          fit: BoxFit.fill,
-                        ),
-                      ],
+              child: ListView(
+                children: [
+                  Center(
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 50, bottom: 5, left: 20, right: 20),
+                      child: Column(
+                        children: [
+                          const Text("List user is empty!",
+                            style: TextStyle(
+                              fontFamily: 'Poppins',
+                              fontSize: 15
+                            ),
+                          ),
+                          Image.asset(
+                            'assets/images/empty.png',
+                            fit: BoxFit.fill,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-              ]),
+                ]
+              ),
             );
           }
           return RefreshIndicator(
@@ -150,35 +152,35 @@ class _Screen3State extends State<Screen3> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                              padding: const EdgeInsets.only(right: 10),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(50.0),
-                                child: Image.network(
-                                  item.avatar,
-                                  width: 70,
-                                ),
-                              )
+                            padding: const EdgeInsets.only(right: 10),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(50.0),
+                              child: Image.network(
+                                item.avatar,
+                                width: 70,
+                              ),
+                            )
                           ),
                           Padding(
-                              padding: const EdgeInsets.only(top: 13, bottom: 13),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text('${item.firstName} ${item.lastName}',
-                                    style: const TextStyle(
-                                        fontFamily: 'Poppins',
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16
-                                    ),
+                            padding: const EdgeInsets.only(top: 13, bottom: 13),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('${item.firstName} ${item.lastName}',
+                                  style: const TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16
                                   ),
-                                  Text(item.email,
-                                    style: const TextStyle(
-                                        fontFamily: 'Poppins',
-                                        fontSize: 12
-                                    ),
+                                ),
+                                Text(item.email,
+                                  style: const TextStyle(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 12
                                   ),
-                                ],
-                              )
+                                ),
+                              ],
+                            )
                           ),
                         ],
                       ),
