@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:suitmedia_mobdev/ui/cubit/list_user_cubit.dart';
-import 'package:suitmedia_mobdev/ui/screen/Screen1.dart';
+import 'package:suitmedia_mobdev/ui/screen/FirstScreen.dart';
 
 void main() {
   runApp(const MyApp());

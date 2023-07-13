@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:suitmedia_mobdev/ui/screen/Screen2.dart';
+import 'package:suitmedia_mobdev/ui/screen/SecondScreen.dart';
 
 class Screen1 extends StatefulWidget {
   const Screen1({super.key, required this.title});
@@ -37,7 +37,6 @@ class _Screen1State extends State<Screen1> {
         _resultMessage = 'not palindrome';
       });
     }
-
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -188,8 +187,7 @@ class _Screen1State extends State<Screen1> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
-                    child: const Text(
-                      "Next",
+                    child: const Text("Next",
                       style: TextStyle(
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.bold,
