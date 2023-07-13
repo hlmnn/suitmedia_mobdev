@@ -101,7 +101,7 @@ class _Screen1State extends State<Screen1> {
                               hintText: 'Name',
                               hintStyle: const TextStyle(
                                 fontFamily: 'Poppins',
-                                color: Color(0xff6867775c),
+                                color: Color(0xff6867775C),
                                 fontSize: 14,
                               ),
                               border: OutlineInputBorder(
@@ -126,7 +126,7 @@ class _Screen1State extends State<Screen1> {
                               hintText: 'Palindrome',
                               hintStyle: const TextStyle(
                                 fontFamily: 'Poppins',
-                                color: Color(0xff6867775c),
+                                color: Color(0xff6867775C),
                                 fontSize: 14,
                               ),
                               border: OutlineInputBorder(
