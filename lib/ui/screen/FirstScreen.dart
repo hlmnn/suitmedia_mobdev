@@ -155,7 +155,7 @@ class _Screen1State extends State<Screen1> {
                       ),
                     ),
                     child: const Text(
-                      "Check",
+                      "CHECK",
                       style: TextStyle(
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.bold,
@@ -187,7 +187,7 @@ class _Screen1State extends State<Screen1> {
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
-                    child: const Text("Next",
+                    child: const Text("NEXT",
                       style: TextStyle(
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.bold,
