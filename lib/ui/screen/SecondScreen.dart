@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:suitmedia_mobdev/ui/screen/Screen3.dart';
+import 'package:suitmedia_mobdev/ui/screen/ThirdScreen.dart';
 
 class Screen2 extends StatefulWidget {
   const Screen2({super.key, required this.title, required this.name, required this.selectedName});
@@ -91,8 +91,7 @@ class _Screen2State extends State<Screen2> {
               borderRadius: BorderRadius.circular(10),
             ),
           ),
-          child: const Text(
-            "Choose a User",
+          child: const Text("Choose a User",
             style: TextStyle(
               fontFamily: 'Poppins',
               fontWeight: FontWeight.bold,
